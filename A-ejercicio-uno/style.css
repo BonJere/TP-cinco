@@ -1,0 +1,25 @@
+.padre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+img{
+    width: 170px;
+    height: 250px;
+    margin: 12px;
+    border-radius: 12px;
+}
+
+#uno.hijo::before {
+    content: "15% OFF";
+    display: flex;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+div#uno.hijo::before {
+}
