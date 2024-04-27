@@ -4,12 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>R & B COMPANY - Tu gimnasio de confianza</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div>
+        <img src="../imagenes/Diseño sin título.png" class="image" alt="Your Image">
+    </div>
+    <script>
+        const image = document.querySelector('.image');
+        let isRotated = false;
 
+        image.addEventListener('click', () => {
+            if (!isRotated) {
+                image.style.transform = 'rotate(90deg)';
+                isRotated = true;
+            }
+        });
+    </script>
 </body>
 
 </html>

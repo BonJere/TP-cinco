@@ -1,0 +1,11 @@
+
+  
+  .image:hover {
+    transform: scale(1.2); /* Makes the image bigger on hover */
+  }
+  
+  .image.rotated {
+    transform: rotate(90deg); /* Makes the image rotate */
+  }
+
+ 

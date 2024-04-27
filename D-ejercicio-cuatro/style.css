@@ -1,0 +1,26 @@
+
+.button {
+    display: inline-block;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #007bff, #dc3545);
+    background-size: 200% auto;
+    background-position: right center;
+    background-position-x: right; /* Add this line */
+    transition: background-size 0.5s ease;
+  }
+  
+  .button:hover {
+    background-position-x: left; /* Change this line */
+    transition: background-position-x 2s ease; /* Add this line */
+  }
