@@ -150,7 +150,7 @@ input.enviar:hover {
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
-        background: linear-gradient(to right, #ffdd00, #e32d2d);
+        background: linear-gradient(to right, #e32d2d, #ffb700);
         background-size: 200% auto;
         background-position: right center;
         background-position-x: right; /* Add this line */
