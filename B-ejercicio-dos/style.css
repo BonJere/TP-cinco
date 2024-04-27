@@ -107,35 +107,53 @@ input:focus {
     outline: none;
 }
 input.enviar:hover {
-    background-position: right center;
+  background-position-x: left; /* Change this line */
+  transition: background-position-x 2s ease; /* Add this line */
   }
 
     input.enviar{
-        background: linear-gradient(to right, #66a1ff, #715eff);
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: background-position 0.5s ease;
-        background-size: 200% 200%;
+      display: inline-block;
+      padding: 15px 32px;
+      margin: 4px 2px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      user-select: none;
+      cursor: pointer;
+      background: linear-gradient(to right, #007bff, #dc3545);
+      background-size: 200% auto;
+      background-position: right center;
+      background-position-x: right; /* Add this line */
+      transition: background-size 0.5s ease;
       }
       
       input.borrar:hover {
-        background-position: right center;
+        background-position-x: left; /* Change this line */
+        transition: background-position-x 2s ease; /* Add this line */
       }
       input.borrar{
-        background: linear-gradient(to right, #fa5d5d, #ef5725);
+        display: inline-block;
+        padding: 15px 32px;
+        margin: 4px 2px;
         border: none;
-        border-radius: 5px;
-        color: white;
+        border-radius: 12px;
         font-size: 16px;
-        padding: 10px 20px;
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: center;
         text-transform: uppercase;
+        white-space: nowrap;
+        user-select: none;
         cursor: pointer;
-        transition: background-position 0.5s ease;
-        background-size: 200% 200%;
+        background: linear-gradient(to right, #ffdd00, #e32d2d);
+        background-size: 200% auto;
+        background-position: right center;
+        background-position-x: right; /* Add this line */
+        transition: background-size 0.5s ease;
       }
       
