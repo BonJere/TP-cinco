@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R & B COMPANY - Tu gimnasio de confianza</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .image {
+            transition: transform .5s ease;
+        }
+
+        .image.rotated {
+            transform: rotate(360deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -14,13 +22,9 @@
     </div>
     <script>
         const image = document.querySelector('.image');
-        let isRotated = false;
 
         image.addEventListener('click', () => {
-            if (!isRotated) {
-                image.style.transform = 'rotate(90deg)';
-                isRotated = true;
-            }
+            image.classList.toggle('rotated');
         });
     </script>
 </body>

@@ -1,11 +1,29 @@
 
-  
-  .image:hover {
-    transform: scale(1.2); /* Makes the image bigger on hover */
-  }
-  
-  .image.rotated {
-    transform: rotate(90deg); /* Makes the image rotate */
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
 
- 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: scale(1.2);
+}
+
+.image.rotated {
+  transform: rotate(360deg);
+}
