@@ -9,8 +9,50 @@
 </head>
 
 <body>
-    <div>
-        <button class="button">COMPRAR</button>
+    <div class="container">
+        <div class="selection">
+            <div class="selection-item" data-promotion="promo1">PROMO 1: 15% OFF</div>
+            <div class="selection-item" data-promotion="promo2">PROMO 2: 20% OFF</div>
+            <div class="selection-item" data-promotion="promo3">PROMO 3: SIN ESPACIO</div>
+            <div class="selection-item" data-promotion="promo4">PROMO 4: 15 CLASSES PERSONALIZADAS - $15000</div>
+        </div>
+        <div class="promotion-description">
+            <div class="promotion-title">PROMO 1: 15% OFF</div>
+            <div class="promotion-details">
+                Obtén un 15% de descuento en tu membresía anual.
+            </div>
+            <div class="promotion-title">PROMO 2: 20% OFF</div>
+            <div class="promotion-details">
+                Obtén un 20% de descuento en tu membresía de 6 meses.
+            </div>
+            <div class="promotion-title">PROMO 3: SIN ESPACIO</div>
+            <div class="promotion-details">
+                SIN ESPACIO - Por el momento no hay espacio para esta clase.
+            </div>
+            <div class="promotion-title">PROMO 4: 15 CLASES PERSONALIZADAS - $15000</div>
+            <div class="promotion-details">
+                Obtén 15 clases personalizadas con uno de nuestros entrenadores certificados.
+            </div>
+        </div>
+        <button class="buy-button">Comprar</button>
+        <script>
+            const selectionItems = document.querySelectorAll('.selection-item');
+            const promotionDescription = document.querySelector('.promotion-description');
+            const buyButton = document.querySelector('.buy-button');
+
+            selectionItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const promotion = item.dataset.promotion;
+                    selectionItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    promotionDescription.querySelectorAll('.promotion-title').forEach(title => title.classList.remove('active'));
+                    promotionDescription.querySelectorAll('.promotion-details').forEach(details => details.classList.remove('active'));
+                    promotionDescription.querySelectorAll(`.promotion-title[data-promotion="${promotion}"]`).forEach(title => title.classList.add('active'));
+                    promotionDescription.querySelectorAll(`.promotion-details[data-promotion="${promotion}"]`).forEach(details => details.classList.add('active'));
+                    buyButton.style.display = 'block';
+                });
+            });
+        </script>
     </div>
 </body>
 

@@ -6,15 +6,17 @@ body {
   padding: 0;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+.title {
+  background: #00f8ff;
+background: linear-gradient(173deg,#00f8ff 20%, #ff00ee 80%);
+background: -webkit-linear-gradient(173deg,#00f8ff 20%, #ff00ee 80%);
+background: -moz-linear-gradient(173deg,#00f8ff 20%, #ff00ee 80%);
+  background-size: 100% 2px;
+  color: transparent;
+  text-shadow: -6px 3px 35px rgba(126,86,86,1);
 }
 
+  
 .image {
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -26,4 +28,30 @@ body {
 
 .image.rotated {
   transform: rotate(360deg);
+}
+
+.buy-button {
+  display: none;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #007bff, #dc3545);
+  background-size: 200% auto;
+  background-position: right center;
+  background-position-x: right;
+  transition: background-size 0.5s ease;
+}
+
+.buy-button:hover {
+  background-position-x: left;
+  transition: background-position-x 2s ease;
 }
